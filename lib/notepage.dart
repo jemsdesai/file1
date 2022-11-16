@@ -5,10 +5,11 @@ import 'package:notes/homePage/home.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sqflite/sqflite.dart';
 class makeNote extends StatefulWidget {
-  Database? database;
   String note,title;
   int id;
   int theme;
+  Database? database;
+
   makeNote(this.database,[this.title="",this.note="",this.theme=-1,this.id=-1]);
   @override
   State<makeNote> createState() => _makeNoteState();
@@ -42,7 +43,7 @@ class _makeNoteState extends State<makeNote> {
     return SafeArea(
         child: Scaffold(
       // resizeToAvoidBottomInset: false,
-      appBar: AppBar(
+      appBar AppBar(
         backgroundColor: curent_AppBarColor,
         centerTitle: false,
         toolbarHeight: allhight(context) * 0.08,
